@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Taiwan Travel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
@@ -69,12 +71,13 @@
   <div class="container">
     <div class="hero-body d-flex flex-column align-items-center">
       <img src="./assets/images/taiwan_logo_white.svg" alt="台灣景點搜尋">
-      <div class="search-area">
+      <!-- 搜尋框 -->
+      <div class="search-area custom-style-primary">
         <form action="post" method="post" class="d-flex">
-          <select name="area" id="area" class="form-select" aria-label="Default select example">
+          <select name="area" id="area" class="form-select form-select-m" aria-label="Default select example">
             <option value="北部地區">北部地區</option>
           </select>  
-          <select name="city" id="city" class="form-select" aria-label="Default select example">
+          <select name="city" id="city" class="form-select form-select-m" aria-label="Default select example">
             <option value="全部">全部</option>
             <option value="臺北市">臺北市</option>
           </select>
