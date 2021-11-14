@@ -1,0 +1,26 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: $primary;
+}
+
+p,h1, h2, h3, h4, h5 {
+    margin-bottom: 0; 
+}
+
+ul, ol {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+// 自訂通用樣式
+.custom-style-primary {
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px #0000004B;
+}
+
+.custom-style-secondary {
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px #0000002E;
+}
+

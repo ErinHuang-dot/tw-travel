@@ -1,6 +1,23 @@
+// typo
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Baskerville&family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap');
+
+// helpers
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "./helpers/mixin";
+@import "./helpers/base";
 
+// components
+@import "./components/hamburger";
+@import "./components/search-area";
+@import "./components/button";
+@import "./components/card";
+@import "./components/carousel";
 
-@import './layout/index.scss'
+// layouts
+@import "./layout/layout";
+
+// pages
+@import "./layout/hero";
+@import "./layout/attractions";

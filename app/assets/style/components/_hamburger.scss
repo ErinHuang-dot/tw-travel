@@ -1,0 +1,47 @@
+.hamburger {
+    width: 32px;
+    height: 18px;
+    position: relative;
+    &::before,
+    &::after {  
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        color: white;
+        background-color: currentColor;
+        transition: all .45s ease-in-out;
+    }
+    &::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    &::after {
+        bottom: 0;
+        box-shadow: 0 -9px white;
+    }
+}
+
+.hamburger-open {
+    &::before {
+        top: 9px;
+        transform: rotate(45deg);
+    }
+    &::after {
+        box-shadow: 0 0 transparent;
+        bottom: 9px;
+        transform: rotate(-45deg);
+    }   
+}
+
+.hamburger-close {
+    &::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    &::after {
+        box-shadow: 0 -9px white;
+        bottom: 0px;
+        transform: rotate(0);
+    }      
+}

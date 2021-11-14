@@ -1,0 +1,80 @@
+// 景點輪播卡片
+.card-carousel {
+    // width: 444px;
+    height: 212px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    .card-img {
+        object-fit: cover;
+        transition: all .5s ease-in;
+    }
+    .card-img-overlay {
+        padding: 1.125rem;
+    }
+    .card-header, .card-footer {
+        background: none;
+    }
+    .card-title {
+        letter-spacing: 1.12px;
+    }
+    .mask-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: radial-gradient(circle farthest-side at center,transparent, #000);
+        opacity: 0;
+    }
+    &:hover {
+        .card-img {
+            transform: scale(1.1);
+        }
+        .mask-img {
+            opacity: .2;
+        }
+    }
+}
+
+// 景點列表卡片
+.card-horizontal {
+    overflow: hidden;
+    border-color: #EBEBEB;
+    .card-body {
+        padding: 1.125rem;
+        height: 100%;
+    }
+    .icon-site {
+        width: 20px;
+    }
+    .icon-time {
+        width: 18px;
+    }
+    .icon-click {
+        width: 20px;
+    }
+    &-s {
+        position: relative;
+    }
+    &-img {
+        transition: all .5s ease-in;        
+    }
+    .mask-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: radial-gradient(circle farthest-side at center,transparent, #fff);
+        opacity: 0;
+    }
+    &:hover {
+        .card-img {
+            transform: scale(1.1);
+        }
+        .mask-img {
+            opacity: .2;
+        }
+    }
+}
+.tag-category {
+    border-radius: 15px;
+    padding: .3125rem .625rem .375rem;
+} 
+

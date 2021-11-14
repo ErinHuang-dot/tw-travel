@@ -1,0 +1,41 @@
+.slick {
+    padding: .75rem 0 3.125rem;
+    &-header {
+        margin-bottom: 1.125rem;
+    }
+}
+
+// .slick-item {
+//     margin: 10px;
+//     position: relative;
+// }
+
+.slick-item {
+  transform: scale(.8);
+  transition: transform .3s;
+} 
+
+.slick-center {
+  transform: scale(1);
+}
+
+.slick-body {
+	position: relative;
+	&:after, &:before {
+		content: "";
+		background: #FAFAFA;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 18%;
+		z-index: 100;
+		//opacity: .9;
+	}
+	&:after {
+		right: 0;
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%);
+	}
+	&:before {
+		background: linear-gradient(to right, rgba(255,255,255,1) 25%,rgba(255,255,255,0) 100%);
+	}
+}
