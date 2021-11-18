@@ -68,16 +68,17 @@
 
     
 <div class="banner-1"></div>
+<!-- 主要內容區 -->
 <div class="container">
     <!-- 麵包屑 -->
     <div class="breadcrumb">
-        <a class="me-3" href="/">首頁</a>
+        <a class="breadcrumb-link me-3" href="/">首頁</a>
         <i class="bi bi-chevron-right me-3"></i>
-        <a class="text-secondary" href="#">景點查詢</a>
+        <a class="breadcrumb-link text-secondary" href="#">景點查詢</a>
     </div>
     <!-- 景點輪播 -->
     <div class="slick">
-        <h2 class="text-secondary slick-header">熱門景點</h2>
+        <h2 class="text-secondary slick-title">熱門景點</h2>
         <!-- carousel wrapper -->
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner slick-body">
@@ -183,88 +184,91 @@
             </div>           
         </div> -->
     </div>
-    <!-- 查詢工具區 -->
+    <!-- 景點查詢 -->
     <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-lg-3">
             <!-- 關鍵字查詢 -->
             <div class="search-keyword">
+                <h2 class="search-keyword-title text-secondary d-block d-md-none mb-4">快速搜尋</h2>
                 <input class="custom-style-primary w-100 border-0 p-4" type="search" name="keyword" placeholder="關鍵字查詢">
                 <button class="icon-search border-0 p-4 bg-transparent" type="button"><img src="./assets/images/icon/search.svg" alt=""></button>
             </div>
-            <div class="search-body custom-style-primary px-4 py-5">
+            <div class="search-body custom-style-primary px-3 px-md-4 pt-5 pb-6 pb-lg-5 mb-8 mb-lg-0">
                 <!-- 地區/縣市查詢 -->
-                <h4 class="mb-4">篩選內容</h4>
-                <div class="search-body-top">
-                    <h3 class="text-secondary mb-2">地區/縣市</h3>
-                    <form action="post" method="post">
-                        <select name="area" id="area" class="form-select w-100 mb-2">
+                <h4 class="d-none d-lg-block mb-4">篩選內容</h4>
+                <div class="search-body-top mb-6 mb-lg-0">
+                    <h3 class="text-secondary d-none d-lg-block mb-2">地區/縣市</h3>
+                    <form action="post" method="post" class="d-flex justify-content-between d-lg-block">
+                        <select name="area" id="area" class="search-body-top-item form-select mb-lg-2">
                             <option value="北部地區">北部地區</option>
                         </select>
-                        <select name="city" id="city" class="form-select w-100 mb-4">
+                        <select name="city" id="city" class="search-body-top-item form-select mb-lg-4">
                             <option value="全部">全部</option>
                             <option value="臺北市">臺北市</option>
                         </select>
                     </form>
                 </div>            
                 <!-- 類別查詢 -->
-                <div class="search-body-bottom pt-4 pb-5">
-                    <h3 class="text-secondary mb-2">類別</h3>
-                    <form action="post" method="post" class="form-check">
-                        <p class="mb-2">
+                <div class="search-body-bottom pt-0 pt-lg-4 pb-5">
+                    <h3 class="search-body-bottom-title text-secondary mb-3 mb-lg-2">類別</h3>
+                    <form action="post" method="post" class="form-check d-flex flex-wrap d-lg-block">
+                        <p class="mb-4 mb-lg-2 me-10 me-lg-0">
                             <input class="form-check-input" type="radio" name="all-site" id="allSite">
                             <label class="form-check-label" for="allSite">全部</label>
                         </p>
-                        <p class="mb-2">
+                        <p class="mb-4 mb-lg-2 me-10 me-lg-0">
                             <input class="form-check-input" type="radio" name="natural" id="natural">
                             <label class="form-check-label" for="natural">自然風景</label>
                         </p>
-                        <p class="mb-2">
+                        <p class="mb-4 mb-lg-2 me-10 me-lg-0">
                             <input class="form-check-input" type="radio" name="history" id="history">
                             <label class="form-check-label" for="history">歷史文化</label>    
                         </p>
                     </form>
                 </div>
                 <div class="text-center">
-                    <button type="button" class="btn btn-accent-1 fs-4 mt-3">Search</button>
+                    <button type="button" class="btn btn-accent-1 fs-5 fs-md-4 mt-3">Search</button>
                 </div>               
             </div>
         </div>
-        <div class="col-9">
+        <!-- 景點列表 -->
+        <div class="col-12 col-lg-9">
             <!-- 排序功能：未做 -->
-            <div class="list-top d-flex flex-row-reverse">
-                <div class="order custom-style-primary d-flex p-4 me-0">
+            <div class="list-top d-flex justify-content-between align-items-center flex-lg-row-reverse">
+                <h2 class="list-top-title text-secondary d-block d-lg-none">搜尋結果</h2>
+                <div class="order custom-style-primary d-flex py-3 px-4 p-lg-4 me-0">
                     <img class="icon-order me-4" src="./assets/images/icon/arrangement.svg" alt="">
-                    <p>排序：熱門度</p>
+                    <p class="order-text">排序：熱門度</p>
                 </div>
             </div>
-            <!-- 景點列表 -->
+            <!-- 景點列表卡片 -->
             <ul class="list-body">
-                <li class="mb-12">
+                <li class="mb-4 mb-md-8 mb-lg-12">
                     <div class="card-horizontal card custom-style-secondary">
                         <div class="row g-0">
-                            <div class="card-horizontal-s col-md-5 overflow-hidden">
-                                <img class="card-horizontal-img card-img img-fluid rounded-start" src="https://www.eastcoast-nsa.gov.tw/image/419/640x480" alt="紫坪">
+                            <div class="card-horizontal-s col-6 col-md-5 overflow-hidden">
+                                <img class="card-horizontal-img card-img rounded-start" src="https://www.eastcoast-nsa.gov.tw/image/419/640x480" alt="紫坪">
                                 <div class="mask-img w-100 h-100"></div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="card-horizontal-e col-6 col-md-7">
                                 <div class="card-body d-flex flex-column">
-                                    <div class="d-flex justify-content-between mb-2">
+                                    <div class="d-md-flex justify-content-between mb-2">
                                         <h2 class="card-title text-secondary">紫坪</h5>
                                         <span class="tag-category bg-accent-1 text-white"><small>自然風景</small></span>
                                     </div>
-                                    <p class="card-text">紫坪位在綠島最南方，從附近的步道，可通往海岸邊的潟湖。此處是由珊瑚礁構成的潮池，也是綠島著名的潟湖所在地，有全綠島最完整的潟湖地形以及珊瑚礁植群，更有茂盛的植物水芫花和珍貴的陸寄居蟹。</p>    
-                                    <div class="card-body-bottom mt-auto d-flex">
-                                        <p class="card-text me-6">
+                                    <p class="card-text card-horizontal-e-text">紫坪位在綠島最南方，從附近的步道，可通往海岸邊的潟湖。此處是由珊瑚礁構成的潮池，也是綠島著名的潟湖所在地，有全綠島最完整的潟湖地形以及珊瑚礁植群，更有茂盛的植物水芫花和珍貴的陸寄居蟹。</p>    
+                                    <div class="card-body-bottom mt-auto d-md-flex">
+                                        <p class="card-body-bottom-text card-text me-6">
                                             <img class="icon-site me-1" src="./assets/images/icon/site.svg" alt="">
                                             <small>臺東縣綠島鄉</small>
                                         </p>
-                                        <p class="card-text">
+                                        <p class="card-body-bottom-text card-text">
                                             <img class="icon-time me-1" src="./assets/images/icon/time.svg" alt="">
                                             <small>全天開放</small>
                                         </p>
-                                        <div class="card-bottom-e ms-auto">
+                                        <div class="card-bottom-e text-end ms-auto">
                                             <img class="icon-click me-1" src="./assets/images/icon/click.svg" alt="">
-                                            <span>1293</span>
+                                            <span class="card-body-bottom-text">1293</span>
                                             <a href="#" class="stretched-link"></a>
                                         </div>
                                     </div>
@@ -273,32 +277,32 @@
                         </div>
                     </div>
                 </li>
-                <li class="mb-12">
+                <li class="mb-4 mb-md-8 mb-lg-12">
                     <div class="card-horizontal card custom-style-secondary">
                         <div class="row g-0">
-                            <div class="card-horizontal-s col-md-5 overflow-hidden">
-                                <img class="card-horizontal-img card-img img-fluid rounded-start" src="https://www.penghu-nsa.gov.tw/FileDownload/TravelInformation/Big/20170905175023863889770.jpg" alt="馬公港 漁人碼頭">
+                            <div class="card-horizontal-s col-6 col-md-5 overflow-hidden">
+                                <img class="card-horizontal-img card-img rounded-start" src="https://www.penghu-nsa.gov.tw/FileDownload/TravelInformation/Big/20170905175023863889770.jpg" alt="馬公港 漁人碼頭">
                                 <div class="mask-img w-100 h-100"></div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="card-horizontal-e col-6 col-md-7">
                                 <div class="card-body d-flex flex-column">
-                                    <div class="d-flex justify-content-between mb-2">
+                                    <div class="d-md-flex justify-content-between mb-2">
                                         <h2 class="card-title text-secondary">馬公港 漁人碼頭</h5>
                                         <span class="tag-category bg-accent-1 text-white"><small>自然風景</small></span>
                                     </div>
-                                    <p class="card-text">馬公第二漁港延伸至馬公第一漁港是一條長長的木棧道，這裡就是漁人碼頭，早晚都有不少人悠閒散步著，在漁人碼頭中段的「菊島之星」，是一間船造型的漁產品直銷中心，可購買紀念品，附近商圈是品嚐澎湖海鮮漁產品的好地方。</p>    
-                                    <div class="card-body-bottom mt-auto d-flex">
-                                        <p class="card-text me-6">
+                                    <p class="card-text card-horizontal-e-text">馬公第二漁港延伸至馬公第一漁港是一條長長的木棧道，這裡就是漁人碼頭，早晚都有不少人悠閒散步著，在漁人碼頭中段的「菊島之星」，是一間船造型的漁產品直銷中心，可購買紀念品，附近商圈是品嚐澎湖海鮮漁產品的好地方。</p>    
+                                    <div class="card-body-bottom mt-auto d-md-flex">
+                                        <p class="card-body-bottom-text card-text me-6">
                                             <img class="icon-site me-1" src="./assets/images/icon/site.svg" alt="">
                                             <small>澎湖縣馬公市</small>
                                         </p>
-                                        <p class="card-text">
+                                        <p class="card-body-bottom-text card-text">
                                             <img class="icon-time me-1" src="./assets/images/icon/time.svg" alt="">
                                             <small>全天開放</small>
                                         </p>
-                                        <div class="card-bottom-e ms-auto">
+                                        <div class="card-bottom-e text-end ms-auto">
                                             <img class="icon-click me-1" src="./assets/images/icon/click.svg" alt="">
-                                            <span>1293</span>
+                                            <span class="card-body-bottom-text">1293</span>
                                             <a href="#" class="stretched-link"></a>
                                         </div>
                                     </div>

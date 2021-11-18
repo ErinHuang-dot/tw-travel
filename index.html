@@ -70,18 +70,22 @@
   <!-- hero -->
   <div class="container">
     <div class="hero-body d-flex flex-column align-items-center">
-      <img src="./assets/images/taiwan_logo_white.svg" alt="台灣景點搜尋">
+      <div class="hero-body-top px-8 px-md-0">
+        <img class="img-fluid" src="./assets/images/taiwan_logo_white.svg" alt="台灣景點搜尋">
+      </div>
       <!-- 搜尋框 -->
       <div class="search-area custom-style-primary">
-        <form action="post" method="post" class="d-flex">
-          <select name="area" id="area" class="form-select form-select-m" aria-label="Default select example">
+        <form action="post" method="post" class="d-block d-md-flex">
+          <select name="area" id="area" class="form-select form-select-m mb-5 mb-md-0" aria-label="Default select example">
             <option value="北部地區">北部地區</option>
           </select>  
-          <select name="city" id="city" class="form-select form-select-m" aria-label="Default select example">
+          <select name="city" id="city" class="form-select form-select-m mb-5 mb-md-0" aria-label="Default select example">
             <option value="全部">全部</option>
             <option value="臺北市">臺北市</option>
           </select>
-          <button type="button" class="btn btn-accent-1 ms-3">Search</button>
+          <div class="search-area-e ms-md-auto">
+            <button type="button" class="btn btn-accent-1">Search</button>
+          </div>
         </form>
       </div>
     </div>
